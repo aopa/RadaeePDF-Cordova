@@ -66,9 +66,10 @@
         [self showReader];
         
     } else {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *filePath = [documentsDirectory stringByAppendingPathComponent:[url stringByReplacingOccurrencesOfString:@"file://" withString:@""]];
+        //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        //NSString *documentsDirectory = [paths objectAtIndex:0];
+        //NSString *filePath = [documentsDirectory stringByAppendingPathComponent:[url stringByReplacingOccurrencesOfString:@"file://" withString:@""]];
+        NSString *filePath = [url stringByReplacingOccurrencesOfString:@"file://" withString:@""];
         
         [self openPdf:filePath withPassword:[params objectForKey:@"password"]];
     }

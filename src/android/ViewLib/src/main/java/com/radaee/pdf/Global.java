@@ -307,7 +307,7 @@ public class Global
 	 * save_thumb_in_cache, save pdf first page in cache storage
 	 */
 	public static String tmp_path = null;
-	public static boolean debug_mode = true;
+	public static boolean debug_mode = false;
 	public static boolean save_thumb_in_cache = true;
 
 	static private void load_file(Resources res, int res_id, File save_file)
@@ -661,7 +661,7 @@ public class Global
 		render_mode = recommandedRenderMode();// 0,1,2 0:draft 1:normal 2:best with over print support.
 		dark_mode = false;// dark mode
 		zoomLevel = 3;
-        debug_mode = true;
+        debug_mode = false;
 		setAnnotTransparency(0x200040FF);
 	}
 
